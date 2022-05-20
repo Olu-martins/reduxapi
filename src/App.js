@@ -1,8 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+import Store from './components/Store'
+import Posts from './components/Posts';
+import Postform from './components/Postform';
+import { Provider } from 'react-redux';
+
+
 
 function App() {
   return (
+    <Provider Store={Store}>
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -18,7 +25,11 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+      <Postform />
+      <hr />
+      <Posts />
+      </div>
+      </Provider>
   );
 }
 
